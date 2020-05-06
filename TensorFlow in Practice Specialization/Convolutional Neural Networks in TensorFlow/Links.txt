@@ -1,0 +1,51 @@
+You'll be looking a lot at Image Augmentation this week.
+
+Image Augmentation is a very simple, but very powerful tool to help you avoid overfitting your data. The concept is very simple though: If you have limited data, then the chances of you having data to match potential future predictions is also limited, and logically, the less data you have, the less chance you have of getting accurate predictions for data that your model hasn't yet seen. To put it simply, if you are training a model to spot cats, and your model has never seen what a cat looks like when lying down, it might not recognize that in future.
+
+Augmentation simply amends your images on-the-fly while training using transforms like rotation. So, it could 'simulate' an image of a cat lying down by rotating a 'standing' cat by 90 degrees. As such you get a cheap way of extending your dataset beyond what you have already.
+
+To learn more about Augmentation, and the available transforms, check out https://github.com/keras-team/keras-preprocessing -- and note that it's referred to as preprocessing for a very powerful reason: that it doesn't require you to edit your raw images, nor does it amend them for you on-disk. It does it in-memory as it's performing the training, allowing you to experiment without impacting your dataset.
+
+
+Ok, now that we've looked at Image Augmentation implementation in Keras, let's dig down into the code.
+
+You can see more about the different APIs at the Keras site here: https://keras.io/preprocessing/image/
+
+
+https://pixabay.com/photos/bed-dog-animals-dogs-pets-relax-1284238/
+
+https://www.tensorflow.org/tutorials/images/transfer_learning
+
+
+Another useful tool to explore at this point is the Dropout.
+
+The idea behind Dropouts is that they remove a random number of neurons in your neural network. This works very well for two reasons: The first is that neighboring neurons often end up with similar weights, which can lead to overfitting, so dropping some out at random can remove this. The second is that often a neuron can over-weigh the input from a neuron in the previous layer, and can over specialize as a result. Thus, dropping out can break the neural network out of this potential bad habit!
+
+Check out Andrew's terrific video explaining dropouts here: https://www.youtube.com/watch?v=ARq74QuavAo
+
+
+
+You saw Transfer Learning, and how you can take an existing model, freeze many of its layers to prevent them being retrained, and effectively 'remember' the convolutions it was trained on to fit images.
+
+You then added your own DNN underneath this so that you could retrain on your images using the convolutions from the other model.
+
+You learned about regularization using dropouts to make your network more efficient in preventing over-specialization and this overfitting.
+
+
+http://www.laurencemoroney.com/rock-paper-scissors-dataset/
+
+Rock Paper Scissors is a dataset containing 2,892 images of diverse hands in Rock/Paper/Scissors poses. It is licensed CC By 2.0 and available for all purposes, but it’s intent is primarily for learning and research.
+
+Rock Paper Scissors contains images from a variety of different hands,  from different races, ages and genders, posed into Rock / Paper or Scissors and labelled as such. You can download the training set here, and the test set here. These images have all been generated using CGI techniques as an experiment in determining if a CGI-based dataset can be used for classification against real images. I also generated a few images that you can use for predictions. You can find them here.
+
+Note that all of this data is posed against a white background.
+
+Each image is 300×300 pixels in 24-bit color
+
+https://storage.googleapis.com/laurencemoroney-blog.appspot.com/rps.zip
+
+https://storage.googleapis.com/laurencemoroney-blog.appspot.com/rps-test-set.zip
+
+https://storage.googleapis.com/laurencemoroney-blog.appspot.com/rps-validation.zip
+
+https://www.kaggle.com/datamunge/sign-language-mnist
