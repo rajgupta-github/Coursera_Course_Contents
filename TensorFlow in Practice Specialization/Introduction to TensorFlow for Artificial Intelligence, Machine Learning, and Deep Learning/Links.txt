@@ -1,5 +1,3 @@
-!pip install tensorflow==2.0.0-alpha0 
-
 In these videos you were given an introduction to the concepts and paradigms of Machine Learning and Deep Learning. You saw that the traditional paradigm of expressing rules in a coding language may not always work to solve a problem. As such, scenarios such as Computer Vision are very difficult to solve with rules-based programming. Instead, if we feed a computer with enough data that we describe (or label) as what we want it to recognize, given that computers are really good at processing data and finding patterns that match, then we could potentially ‘train’ a system to solve a problem. We saw a super simple example of that -- fitting numbers to a line. So now let’s go through a notebook and execute the code that trains a neural network to learn how a set of numbers we give it make up a line, so it can then extend the line if we need to.
 
 TensorFlow is available at TensorFlow.org, and video updates from the TensorFlow team are at youtube.com/tensorflow
