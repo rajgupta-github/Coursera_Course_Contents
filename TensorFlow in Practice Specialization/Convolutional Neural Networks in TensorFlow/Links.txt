@@ -49,3 +49,5 @@ https://storage.googleapis.com/laurencemoroney-blog.appspot.com/rps-test-set.zip
 https://storage.googleapis.com/laurencemoroney-blog.appspot.com/rps-validation.zip
 
 https://www.kaggle.com/datamunge/sign-language-mnist
+
+https://www.kaggle.com/c/dogs-vs-cats/overview
